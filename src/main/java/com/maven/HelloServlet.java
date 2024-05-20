@@ -13,12 +13,14 @@ public class HelloServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		//response.getWriter().append("Served at: localhost:8090").append(request.getContextPath());
-		
+	try {
 		Message m1 = new Message();
 		
 		response.setContentType("text/plain");
 		response.getWriter().write(m1.getMessage());
+		} catch(IOException e) {
+			throw new ServletException("IOException encountered in doGet method", e);
+		}
 	}
 
 }
