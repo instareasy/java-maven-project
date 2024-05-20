@@ -20,7 +20,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-public class HelloServletTest {
+class HelloServletTest {
 	
 	@InjectMocks
 	private HelloServlet helloServlet;
@@ -42,7 +42,7 @@ public class HelloServletTest {
 	}
 	
 	@Test
-	public void testDoGet() throws Exception {
+	void testDoGet() throws Exception {
 		helloServlet.doGet(req, resp);
 		verify(resp).setContentType("text/plain");
 		
@@ -52,7 +52,7 @@ public class HelloServletTest {
 	}
 	
 	@Test
-    public void testDoGetWithException() throws Exception {
+    void testDoGetWithException() throws Exception {
         when(resp.getWriter()).thenThrow(new IOException("Test Exception"));
         Exception exception = assertThrows(ServletException.class, new Executable() {
             @Override
