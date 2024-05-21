@@ -5,7 +5,9 @@ import java.util.logging.Logger;
 public class Message {
 	private static final String INFO = "This is the message to be displayed on home page.";
 	
-	public Message() { /* TODO document why this constructor is empty */ }
+	public Message() { 
+		// This constructor is intentionally empty. Nothing special is needed here. 
+	}
 	
 	public String getMessage() {
 		return Message.INFO;			
