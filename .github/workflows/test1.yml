@@ -30,9 +30,11 @@ jobs:
 
          # runs a set of command using the runners shell
           - name: Run a mulit-line script    # name to diplay on GitHub
-            run: 
-              echo Add other actions to build, 
-              echo test, and deploy your project.
+            run: echo Add other actions to build,
+                 echo test, and deploy your project
+            
+              #echo Add other actions to build, 
+              #echo test, and deploy your project.
 
           
   
