@@ -1,0 +1,17 @@
+name: workflow-with-input
+on:
+  workflow_dispatch:
+    inputs:
+      person-name:
+        description: "Person to greet"
+        default: "Reasy"
+        required: true
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send greetings
+        run: echo "hello ${{github.event.inputs.person-name}}
+        
+  
